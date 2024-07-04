@@ -13,7 +13,7 @@
 <body class="">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home section -->
-        <section class="home flex flex-col justify-center min-h-screen items-center hidden">
+        <section onclick="play()" class="home flex flex-col justify-center min-h-screen items-center">
             <div class="flex flex-col items-center space-y-5">
                 <h1 class="anton text-9xl font-bold text-white tracking-wider">ALPHABET CLASH</h1>
                 <p class="poppins text-xl text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
@@ -21,7 +21,7 @@
             </div>
         </section>
         <!-- play ground section -->
-        <section class="play-ground flex flex-col items-center justify-center gap-20 p-12">
+        <section class="play-ground flex flex-col items-center justify-center gap-20 p-12 hidden">
             <!-- screen section -->
             <div class="artboard artboard-horizontal phone-6 bg-[#ffffffb3] border-[20px] border-[#010313cc]">
                 <div class="flex justify-center">
@@ -82,10 +82,19 @@
                 </button>
             </div>
         </section>
-        <section class="score">
-
+        <!-- Score section -->
+        <section class="score flex justify-center items-center min-h-screen border hidden">
+            <div class="text-white space-y-5 text-center bg-[#ffffff33] p-7 rounded-xl">
+                <h1 class="text-6xl">
+                    <span class="font-bold">Score : </span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p>Practice will make you Pro</p>
+            </div>
         </section>
     </main>
+<script src="script/alphaClash.js"></script>
 </body>
 
 </html>
