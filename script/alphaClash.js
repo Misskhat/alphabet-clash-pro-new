@@ -17,7 +17,11 @@ function gameOver() {
     hideElementById('play-screen');
     showElementById('final-score');
     const lastScore = getTextElementValueById('current-score');
+    document.getElementById('last-score').innerText = lastScore
     
+    // clear the last selected alphabets
+    const currentAlphabet = document.getElementById('current-alphabet').innerText;
+    removeBackgroundKeyboardColor(currentAlphabet);
     
 }
 
@@ -31,6 +35,11 @@ function continueGame() {
 function keyboardButtonHandler(event) {
     const userPress = event.key.toLowerCase();
     console.log(userPress);
+    // special condition if play press 'Esc'
+    if (userPress === 'escape') {
+        gameOver()
+    };
+
     const currentAlphabet = document.getElementById('current-alphabet');
     const currentAlphabetInnerText = currentAlphabet.innerText;
     const screenCurrentAlphabet = currentAlphabetInnerText.toLowerCase();
