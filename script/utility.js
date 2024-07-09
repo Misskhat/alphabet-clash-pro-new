@@ -21,3 +21,19 @@ function setBackGroundKeboardColor(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400')
 }
+function removeBackgroundKeyboardColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400')
+}
+
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+    const value = parseInt(elementText);
+    return value;
+}
+
+function setTextElementValueById(elementId, value) {
+    const element = getElementById(elementId);
+    element.innerText = value; 
+}
